@@ -6,7 +6,7 @@ public abstract class Document {
          public String documentText; //текст документа
          public int regNumber; //регистрационный номер документа
          public DateFormat dataReg; //дата регистрации документа
-         public String authorName; //автор документа
+         public String author; //автор документа
 
          public Document(){}
 
@@ -14,13 +14,13 @@ public abstract class Document {
              this.id = id;
          }
 
-         public Document(int id, String documentName,  String documentText, int regNumber,  DateFormat dataReg,  String authorName) {
+         public Document(int id, String documentName,  String documentText, int regNumber,  DateFormat dataReg,  String author) {
                  this.id = id;
                  this.documentName = documentName;
                  this.documentText = documentText;
                  this.regNumber = regNumber;
                  this.dataReg = dataReg;
-                 this.authorName = authorName;
+                 this.author = author;
          }
 
         public int getID() {
@@ -32,6 +32,14 @@ public abstract class Document {
             this.id = id;
         }
 
+        public void setAuthor(String author) {
+            this.author = author;
+         }
+
+         public String getAuthor() {
+             return author;
+        }
+
          public String toString() {
              final StringBuffer sb = new StringBuffer("Document{");
              sb.append("documentID=").append(id);
@@ -39,7 +47,7 @@ public abstract class Document {
              sb.append(", documentText='").append(documentText).append('\'');
              sb.append(", regNumber=").append(regNumber);
              sb.append(", dataReg=").append(dataReg);
-             sb.append(", authorName=").append(authorName);
+             sb.append(", authorName=").append(author);
              sb.append('}');
              return sb.toString();
          }

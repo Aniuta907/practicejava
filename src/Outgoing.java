@@ -11,9 +11,17 @@ public class Outgoing extends Document {
         this.deliveryMethod = deliveryMethod;
     }
 
+    public void setRecipient(String recipient) {
+        this.recipient = recipient;
+    }
+
+    public void setdeliveryMethod(String deliveryMethod) {
+        this.deliveryMethod = deliveryMethod;
+    }
+
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Incoming{");
+        final StringBuffer sb = new StringBuffer("Outgoing{");
         sb.append("recipient=").append(recipient);
         sb.append(", deliveryMethod=").append(deliveryMethod);
         sb.append('}');

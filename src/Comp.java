@@ -22,7 +22,7 @@ class Comp implements Comparable {
 //        }
 //    }
 
-    @Override
+ //   @Override
     public int compareTo(Object obj) { //значения сортируются сначала по полю regNumber, а затем по dataReg
         Comp entry = (Comp) obj;
 
